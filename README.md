@@ -8,7 +8,7 @@ A website that offers fitness training services.
 * CSS
 
 ## Website
-https://dvaneman.github.io/run-buddy/
+https://dvaneman.github.io/Run-Buddy/
 
 ## Contribution
 Made with ❤️ by Drew Van Eman
