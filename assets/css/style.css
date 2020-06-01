@@ -4,6 +4,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.contact-info > * {
+  flex: 1;
+  margin: 15px;
+}
+
 /* apply styles to <body> */
 body {
   color: #39a6b2;
@@ -43,7 +49,7 @@ header nav ul {
 }
 /* apply styles to <header><nav><ul><li><a> */
 header nav ul li a {
-  margin: 0 30px;
+  padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.55vw;
 }
@@ -55,6 +61,7 @@ header nav ul li a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .hero-form {
@@ -118,7 +125,7 @@ section {
 }
 
 .section-title {
-  font-size: 55px;
+  font-size: 48px;
   color: #024e76;
   border-bottom: 3px solid;
   padding-bottom: 20px;
@@ -256,11 +263,6 @@ section {
   flex-wrap: wrap;
 }
 
-.contact-info > * {
-  flex: 1;
-  margin: 15px;
-}
-
 .contact-info iframe {
   height: 400px;
 }
@@ -316,17 +318,18 @@ footer {
   flex-wrap: wrap;
 }
 
+/* apply styles to <footer><div> */
+footer div {
+  line-height: 1.5;
+  text-align: right;
+  color: black;
+}
+
 /* apply styles to <footer><h2> */
 footer h2 {
   color: #024e76;
   font-size: 30px;
   margin: 0;
-}
-
-/* apply styles to <footer><div> */
-footer div {
-  line-height: 1.5;
-  text-align: right;
 }
 
 /* apply styles to <footer><a> */
@@ -344,4 +347,116 @@ footer a {
 
 .flex-row {
   display: flex;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+  }
+
+  footer h2, footer div {
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-cta, .hero-form {
+    width: 100%;
+  }
+  
+  .hero-cta {
+    text-align: center;
+  }
+
+  .hero-cta, .flex-row {
+    display: block
+  }
+
+  .section-title {
+    width: 80%;
+  }
+  
+  .trainer {
+    flex: 0 70%;
+  }
+  
+  .contact-info iframe{
+    flex: 1 100%;
+  }
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+  
+  section {
+    padding: 30px 15px;
+  }
+
+  .step h3 {
+    flex: 1 100%;
+    text-align: center;
+  }
+
+  .step-info {
+    flex: 2 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .step-img {
+    flex: 0 32%;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .step-text {
+    flex: 100%;  
+  }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  
+  hero-form button {
+    width: 100%;
+  }
+
+  .section-title {
+    width: 95%;
+  }
+
+  .intro p {
+    width: 100%;
+  }
+
+  .trainer {
+    flex: 0 100%;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info > * {
+    flex: 0 100%;
+  }
+
+  .contact-form {
+    order: 3;
+  }
+
+  header nav ul {
+    justify-content: center;
+  }
 }
