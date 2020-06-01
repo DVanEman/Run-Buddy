@@ -1,4 +1,4 @@
-/* apply styles to the entire document */
+/* GLOBAL STYLES START */
 * {
   margin: 0;
   padding: 0;
@@ -9,13 +9,16 @@
   flex: 1;
   margin: 15px;
 }
+/* GLOBAL STYLES END */
 
-/* apply styles to <body> */
+/* BODY STYLES START */
 body {
   color: #39a6b2;
   font-family: Helvetica, Arial, sans-serif;
 }
-/* apply styles to <header> */
+/* BODY STYLES END */
+
+/* HEADER STYLES START */
 header {
   padding: 20px 35px;
   background-color: #39a6b2;
@@ -23,23 +26,23 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-/* apply styles to <header><h1> */
+
 header h1 {
   font-weight: bold;
   font-size: 36px;
   color: #fce138;
   margin: 0;
 }
-/* apply styles to <header><a> */
+
 header a {
   text-decoration: none;
   color: #fce138;
 }
-/* apply styles to <header><nav> */
+
 header nav {
   margin: 7px 0;
 }
-/* apply styles to <header><nav><ul><li> */
+
 header nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -47,13 +50,15 @@ header nav ul {
   align-items: center;
   list-style: none;
 }
-/* apply styles to <header><nav><ul><li><a> */
+
 header nav ul li a {
   padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.55vw;
 }
-/* Hero Style Start */
+/* HEADER STYLES END */
+
+/* HERO STYLES START */
 .hero {
   background-image: url("../images/hero-bg.jpg");
   background-size: cover;
@@ -118,8 +123,9 @@ header nav ul li a {
  width: 100%;
  margin-bottom: 15px;
 }
-/* Hero Styles End */
-/* apply styles to <section> */
+/* HERO STYLES END */
+
+/* SECTION STYLES START */
 section {
   padding: 60px;
 }
@@ -141,8 +147,9 @@ section {
 .secondary-border {
   border-color: #39a6b2;
 }
+/* SECTION STYLES END */
 
-/* What We Do styles start */
+/* WHAT WE DO STYLES START */
 .intro p {
   line-height: 1.7;
   color: #39a6b2;
@@ -151,9 +158,9 @@ section {
   margin: 0 auto;
   text-align: center;
 }
-/* What We Do styles end */
+/* WHAT WE DO STYLES END */
 
-/* What You Do styles start */
+/* WHAT YOU DO STYLES START */
 .steps {
   background-color: #fce138;
 }
@@ -205,9 +212,9 @@ section {
   line-height: 1.5;
   color: #024e76
 }
-/* What You Do styles end*/
+/* WHAT YOU DO STYLES END*/
 
-/* Your Trainer styles start */
+/* YOUR TRAINERS STYLES START */
 .trainers {
   width: 100%;
   margin: 0 auto;
@@ -246,9 +253,17 @@ section {
 .trainer-bio p {
   font-size: 17px;
 }
-/* Your Trainer styles end */
 
-/* Reach Out styles start */
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+/* YOUR TRAINERS STYLES END */
+
+/* REACH OUT STYLES START */
 .contact {
   background-color: #024e76;
 }
@@ -307,8 +322,9 @@ section {
   padding: 15px 0;
   font-size: 16px;
 }
-/* Reach Out styles end */
-/* apply styles to <footer> */
+/* REACH OUT STYLES END */
+
+/* FOOTER STYLES START */
 footer {
   background: #fce138;
   width: 100%;
@@ -318,49 +334,63 @@ footer {
   flex-wrap: wrap;
 }
 
-/* apply styles to <footer><div> */
 footer div {
   line-height: 1.5;
   text-align: right;
   color: black;
 }
 
-/* apply styles to <footer><h2> */
 footer h2 {
   color: #024e76;
   font-size: 30px;
   margin: 0;
 }
 
-/* apply styles to <footer><a> */
 footer a {
   color: #024e76;
 }
+/* FOOTER STYLES END */
 
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
+/* SERVICE PLANS STYLES START */
 .flex-row {
   display: flex;
 }
 
+.grid-container {
+  place-items: stretch stretch;
+}
+
 .service-grid-container {
+  max-width: 940px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 200px 200px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 10px;
 }
 
 .service-grid-item {
-  width: 200px;
-  height: 50px;
   background-color: orange;
   border: solid;
+  padding: 1em;
   color: black;
 }
+
+.box1 {
+  grid-column: 1/ span 1;
+  grid-row: 1/ span 2;
+}
+
+.box2 {
+  grid-column: 3/4;
+  grid-row: 1/-1;
+}
+
+.box3 {
+  grid-column: 2/ span 1;
+  grid-row: 3/ span 1;
+}
+/* SERVICE PLANS STYLES END */
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
