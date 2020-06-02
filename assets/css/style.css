@@ -509,6 +509,7 @@ footer a {
     font-size: 1.5rem;
     font-weight: bold;
   }
+}
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
